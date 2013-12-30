@@ -7,11 +7,12 @@ define([
   'common/modules/grouped_timeseries',
   'common/modules/journey',
   'common/modules/multi_stats',
-  'common/modules/visitors-realtime'
+  'common/modules/visitors-realtime',
+  'common/modules/table'
 ],
 function (DashboardController, ErrorController,
   AvailabilityModule, CompletionNumbersModule, CompletionRateModule, GroupedTimeseriesModule,
-  JourneyModule, MultiStatsModule, VisitorsRealtimeModule) {
+  JourneyModule, MultiStatsModule, VisitorsRealtimeModule, TableModule) {
 
   var ControllerMap = {
     dashboard: DashboardController,
@@ -23,7 +24,8 @@ function (DashboardController, ErrorController,
       grouped_timeseries: GroupedTimeseriesModule,
       journey: JourneyModule,
       multi_stats: MultiStatsModule,
-      realtime: VisitorsRealtimeModule
+      realtime: VisitorsRealtimeModule,
+      table: TableModule
     }
   };
 

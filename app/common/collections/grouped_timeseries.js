@@ -29,6 +29,6 @@ function (MatrixCollection) {
     }
 
   });
-  
+
   return CategoriesCollection;
 });

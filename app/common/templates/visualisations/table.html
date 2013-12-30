@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <% for (var col = 0; col < columns.length; col++) { %>
+        <th><%= columns[col]['title'] %></th>
+      <% } %>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (var row = 0; row < numValues; row++) { %>
+      <tr>
+        <% for (var col = 0; col < columns.length; col++) { %>
+          <td><%= columns[col]['data'][row] %></td>
+        <% } %>
+      </tr>
+    <% } %>
+    <tr>
+    </tr>
+  </tbody>
+</table>

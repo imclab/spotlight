@@ -1,0 +1,47 @@
+{
+  "page-type": "dashboard",
+  "title": "Twilio prototype",
+  "strapline": "Christmas 2013",
+  "tagline": "This dashboard shows data collected via SMS messages. It was created by <a href='https://github.com/alexmuller'>Alex</a> as a Performance Platform Christmas project at the end of 2013.",
+  "modules": [
+    {
+      "slug": "by-sender",
+      "module-type": "table",
+      "title": "Number of messages by sender",
+      "description": "The number of SMS messages each number sent",
+      "data-group": "twilio",
+      "data-type": "prototype",
+      "group_by": "sender_number",
+      "column_meta": [
+        {
+          "title": "Sender",
+          "valueAttr": "sender_number"
+        },
+        {
+          "title": "Count",
+          "valueAttr": "_count"
+        }
+      ]
+    },
+    {
+      "slug": "hourly",
+      "module-type": "grouped_timeseries",
+      "title": "Mean numbers over time",
+      "description": "The mean value per day of numbers sent via SMS",
+      "data-group": "twilio",
+      "data-type": "prototype",
+      "cumulative": false,
+      "value-attr": "value:mean",
+      "category": "data_source",
+      "period": "day",
+      "info": [
+        "Data source: Twilio",
+        "Shows the mean value of the numbers sent via SMS to the Performance Platform"
+      ],
+      "series": [
+         { "id": "twilio", "title": "Twilio" }
+       ],
+      "show-line-labels": true
+    }
+  ]
+}
